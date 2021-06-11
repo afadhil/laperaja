@@ -57,7 +57,7 @@ header > ul > li > a {
 
 .hero {
   height: 80vh;
-  background-image: url(./images/heros/hero-image_2.jpg);
+  background-image: url('../public/images/heros/hero-image_2.jpg');
   background-position: center;
   background-size: cover;
 }
