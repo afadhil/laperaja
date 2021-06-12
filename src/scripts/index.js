@@ -1,8 +1,6 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 
-// console.log('Hello Coders! :)');
-
 const hamburgerBtn = document.querySelector("#hamburger");
 const drawerElement = document.querySelector("#drawer");
 const mainElement = document.querySelector("main");
