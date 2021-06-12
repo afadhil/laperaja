@@ -1,5 +1,6 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
+import '../styles/responsive.css';
 
 const hamburgerBtn = document.querySelector("#hamburger");
 const drawerElement = document.querySelector("#drawer");
