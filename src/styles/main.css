@@ -1,8 +1,10 @@
 :root {
-  --primary-yellow: #ffff0d;
-  --primary-white: #f9f9f9;
   --primary-black: #3e3e3e;
+  --primary-green: #47ffb3;
+  --primary-white: #f9f9f9;
+  --primary-yellow: #ffff0d;
   --second-yellow: #ffff01;
+  --second-green: #91fdd0;
 }
 * {
   animation: fade-in 0.5s ease-in-out;
@@ -17,6 +19,18 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/* styled classes */
+.py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.ts-light { text-shadow: .2rem .2rem .5rem #878787;}
+/* styled classes */
+
 
 header, main, footer { padding: 0 5rem; }
 
@@ -30,7 +44,7 @@ body {
 }
 
 header {
-  background-image: linear-gradient(to right bottom, #91fdd0, #47ffb3);
+  background-image: linear-gradient(to right bottom, var(--second-green), var(--primary-green));
   display: flex;
   justify-content: space-between;
 }
@@ -97,19 +111,37 @@ header > nav > a:last-child { border-right: none; }
   background-color: var(--second-yellow);
 }
 
-/* .content > h2 {
+.content > h2 {
+  margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
-} */
+}
 
-/* styled classes */
-.py-1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+#card-restaurants {
+  display: grid;
+  grid-gap: 2.5rem 4rem;
+  grid-template-columns: repeat(3, 1fr);
 }
-.py-2 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+#card-restaurants > .card {
+  background-color: var(--primary-white);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 1 / 15%);
+  height: 30rem;
 }
-.ts-light { text-shadow: .2rem .2rem .5rem #878787;}
-/* styled classes */
+#card-restaurants > .card figure {
+  position: relative;
+}
+#card-restaurants > .card img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+#card-restaurants > .card span {
+  background-color: var(--primary-yellow);
+  border-radius: 0.35rem;
+  font-size: 0.75rem;
+  line-height: 0.75;
+  margin-top: -1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 1rem;
+}
