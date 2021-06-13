@@ -1,22 +1,60 @@
 :root {
-  --primary-yellow: #ffff0d;
-  --primary-white: #f9f9f9;
+  --font-heading: 'Caveat Brush';
+  --font-basic: 'Montserrat', sans-serif;
   --primary-black: #3e3e3e;
+  --primary-green: #47ffb3;
+  --primary-white: #f9f9f9;
+  --primary-yellow: #ffff0d;
   --second-yellow: #ffff01;
+  --second-green: #91fdd0;
 }
 * {
   animation: fade-in 0.5s ease-in-out;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-basic);
   line-height: 1.5;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D))
+}
 a { 
   color: inherit;
   text-decoration: none;
 }
+/* styled classes */
+.py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.ts-light { text-shadow: .2rem .2rem .5rem #878787;}
+/* styled classes */
+
 
 header, main, footer { padding: 0 5rem; }
 
@@ -30,7 +68,7 @@ body {
 }
 
 header {
-  background-image: linear-gradient(to right bottom, #91fdd0, #47ffb3);
+  background-image: linear-gradient(to right bottom, var(--second-green), var(--primary-green));
   display: flex;
   justify-content: space-between;
 }
@@ -38,7 +76,7 @@ header > a {
   color: var(--primary-yellow);
   font-size: 2.5rem;
   font-weight: 800;
-  font-family: 'Caveat Brush', cursive;
+  font-family: var(--font-heading);
 }
 header > nav {
   align-items: center;
@@ -69,47 +107,97 @@ header > nav > a:last-child { border-right: none; }
   flex-direction: column;
   height: 65vh;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
 }
-.hero > h2 { font-family: 'Caveat Brush', cursive; }
+.hero > h2 { font-family: var(--font-heading); }
 .hero > h2:first-child  {
   color: var(--primary-yellow);
   font-size: 6rem;
   line-height: 0.88;
-  word-spacing: 2rem;
+  letter-spacing: 1rem;
+  margin-right: -1rem;
 }
 .hero > h2:nth-child(2) {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   margin-bottom: 2.5rem;
   word-spacing: 0.5rem;
 }
 .hero > a {
   background-color: var(--primary-white);
   border: .19rem solid var(--second-yellow);
-  border-radius: 10rem;
+  border-radius: 0.8rem;
   color: var(--primary-black);
   font-weight: 600;
-  padding: 1rem 3rem;
+  padding: 0.85rem 3rem;
   text-shadow: none;
 }
 .hero > a:hover {
   background-color: var(--second-yellow);
 }
 
-/* .content > h2 {
+.content > h2 {
+  display: flex;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
-} */
+}
+.content > h2:before, .content > h2:after {
+  border-bottom: .2rem solid var(--primary-black);
+  content: "";
+  flex: 1 1;
+  margin: auto 1.5rem;
+}
 
-/* styled classes */
-.py-1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+#card-restaurants {
+  display: grid;
+  grid-gap: 2.5rem 4rem;
+  grid-template-columns: repeat(3, 1fr);
 }
-.py-2 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+#card-restaurants > .card {
+  background-color: var(--primary-white);
+  border-radius: 1.2rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 1 / 15%);
+  margin-top: 1rem;
+  height: auto;
 }
-.ts-light { text-shadow: .2rem .2rem .5rem #878787;}
-/* styled classes */
+#card-restaurants > .card > figure {
+  position: relative;
+}
+#card-restaurants > .card > figure > img {
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  height: 15rem;
+  object-fit: cover;
+  width: 100%;
+}
+#card-restaurants > .card > figure > span {
+  background-color: var(--primary-yellow);
+  border-radius: 0.35rem;
+  box-shadow: 0 -0.1rem 1.85rem rgb(0 0 1 / 15%);
+  font-size: 0.75rem;
+  line-height: 0.75;
+  margin-top: -1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 1rem;
+}
+#card-restaurants > .card > article { padding: 0.5rem 1.55rem; }
+#card-restaurants > .card > article > h4 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#card-restaurants > .card > article > p {
+  height: 11rem;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  text-align: justify;
+}
