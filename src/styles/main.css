@@ -72,6 +72,9 @@ header {
   background-image: linear-gradient(to right bottom, var(--second-green), var(--primary-green));
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 98;
 }
 header > a {
   color: var(--primary-yellow);
@@ -102,8 +105,9 @@ main { margin-bottom: 1rem; }
     url('../public/images/heros/hero-image_2.jpg');
   background-position: center;
   background-size: cover;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  /* clip-path: polygon(50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%); */
   color: var(--primary-white);
   display: flex;
   flex-direction: column;
@@ -160,7 +164,7 @@ main { margin-bottom: 1rem; }
 }
 #card-restaurants > .card {
   background-color: var(--primary-white);
-  border-radius: 1.2rem;
+  border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgb(0 0 1 / 15%);
   margin-top: 1rem;
   height: auto;
@@ -169,8 +173,8 @@ main { margin-bottom: 1rem; }
   position: relative;
 }
 #card-restaurants > .card > figure > img {
-  border-top-left-radius: 1.2rem;
-  border-top-right-radius: 1.2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   height: 15rem;
   object-fit: cover;
