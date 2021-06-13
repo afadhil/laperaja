@@ -28,8 +28,8 @@ data.restaurants.forEach(
         <span>Rating: <strong>${item.rating}</strong> | Kota: <strong>${item.city}</strong></span>
       </figure>
       <article>
-        <p>Name: ${item.name}</p>
-        <p>Description: ${item.description}</p>
+        <h4>${item.name}</h4>
+        <p>${item.description}</p>
       </article>
     </div>
   `)

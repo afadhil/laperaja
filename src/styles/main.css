@@ -1,4 +1,6 @@
 :root {
+  --font-caveat: 'Caveat Brush';
+  --font-montserrat: 'Montserrat', sans-serif;
   --primary-black: #3e3e3e;
   --primary-green: #47ffb3;
   --primary-white: #f9f9f9;
@@ -9,7 +11,7 @@
 * {
   animation: fade-in 0.5s ease-in-out;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   line-height: 1.5;
   list-style: none;
   margin: 0;
@@ -52,7 +54,7 @@ header > a {
   color: var(--primary-yellow);
   font-size: 2.5rem;
   font-weight: 800;
-  font-family: 'Caveat Brush', cursive;
+  font-family: var(--font-caveat);
 }
 header > nav {
   align-items: center;
@@ -86,12 +88,13 @@ header > nav > a:last-child { border-right: none; }
   margin-bottom: 4rem;
   text-transform: uppercase;
 }
-.hero > h2 { font-family: 'Caveat Brush', cursive; }
+.hero > h2 { font-family: var(--font-caveat); }
 .hero > h2:first-child  {
   color: var(--primary-yellow);
   font-size: 6rem;
   line-height: 0.88;
-  word-spacing: 2rem;
+  letter-spacing: 1rem;
+  margin-right: -1rem;
 }
 .hero > h2:nth-child(2) {
   font-size: 2.7rem;
@@ -104,7 +107,7 @@ header > nav > a:last-child { border-right: none; }
   border-radius: 10rem;
   color: var(--primary-black);
   font-weight: 600;
-  padding: 1rem 3rem;
+  padding: 0.85rem 3rem;
   text-shadow: none;
 }
 .hero > a:hover {
@@ -128,16 +131,16 @@ header > nav > a:last-child { border-right: none; }
   height: 30rem;
   margin-top: 1rem;
 }
-#card-restaurants > .card figure {
+#card-restaurants > .card > figure {
   position: relative;
 }
-#card-restaurants > .card img {
+#card-restaurants > .card > figure > img {
   clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   height: 15rem;
   object-fit: cover;
   width: 100%;
 }
-#card-restaurants > .card span {
+#card-restaurants > .card > figure > span {
   background-color: var(--primary-yellow);
   border-radius: 0.35rem;
   font-size: 0.75rem;
@@ -146,4 +149,16 @@ header > nav > a:last-child { border-right: none; }
   padding: 0.5rem 1rem;
   position: absolute;
   right: 1rem;
+}
+#card-restaurants > .card > article {
+  padding: 0.5rem 1rem 1rem;
+}
+#card-restaurants > .card > article > h4 {
+  font-family: var(--font-caveat);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#card-restaurants > .card > article > p {
+  text-align: justify;
+  line-height: 1.25;
 }
