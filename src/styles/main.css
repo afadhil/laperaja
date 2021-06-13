@@ -3,6 +3,7 @@
   --font-basic: 'Montserrat', sans-serif;
   --primary-black: #3e3e3e;
   --primary-green: #47ffb3;
+  --primary-pink: #e4bad4;
   --primary-white: #f9f9f9;
   --primary-yellow: #ffff0d;
   --second-yellow: #ffff01;
@@ -93,6 +94,7 @@ header > nav > a {
 }
 header > nav > a:last-child { border-right: none; }
 
+main { margin-bottom: 1rem; }
 .hero {
   align-items: center;
   background-image:
@@ -201,3 +203,11 @@ header > nav > a:last-child { border-right: none; }
   overflow-y: auto;
   text-align: justify;
 }
+
+footer {
+  align-items: center;
+  background-color: var(--primary-pink);
+  display: flex;
+  justify-content: space-between;
+}
+footer > strong:last-child > a { color: var(--primary-white); }
