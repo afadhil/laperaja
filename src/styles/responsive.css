@@ -49,8 +49,8 @@
   header > a { font-size: 2rem; }
 
   .hero { margin-bottom: 1.5rem; }
-  .hero > h2:first-child { font-size: 4rem; }
-  .hero > h2:nth-child(2) { font-size: 2rem; }
+  .hero > h1 { font-size: 4rem; }
+  .hero > h2 { font-size: 2rem; }
   .hero > a { padding: 0.5rem 1rem; }
 
   .content > h2 {
