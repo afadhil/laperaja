@@ -1,4 +1,5 @@
 @media screen and (max-width: 31.1875em) {
+  header, main, footer { padding: 1rem; }
   #drawer {
     display: block;
     background-color: #ccf3e2ea;
@@ -35,6 +36,21 @@
 
   header { padding: 1rem 2rem; }
   header > a { font-size: 2rem; }
+
+  .hero { margin-bottom: 1.5rem; }
+  .hero > h2:first-child { font-size: 4rem; }
+  .hero > h2:nth-child(2) { font-size: 2rem; }
+  .hero > a { padding: 0.5rem 1rem; }
+
+  .content > h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.25rem;
+  }
+  .content > h2:before, .content > h2:after { margin: auto 0; }
+
+  #card-restaurants { row-gap: 1.5rem; }
+
+  footer { font-size: 0.7rem; }
 }
 
 @media screen and (min-width: 56.25em) {
