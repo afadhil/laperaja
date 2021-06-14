@@ -20,6 +20,7 @@
 }
 ::-webkit-scrollbar-track
 {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
 	background-color: #F5F5F5;
 	border-radius: 10px;
@@ -45,19 +46,11 @@ a {
   text-decoration: none;
 }
 /* styled classes */
-.py-1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.py-2 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 .ts-light { text-shadow: .2rem .2rem .5rem #878787;}
 /* styled classes */
 
 
-header, main, footer { padding: 0 5rem; }
+header, main, footer { padding: 2rem 5rem; }
 
 #hamburger { display: none; }
 
@@ -70,8 +63,11 @@ body {
 
 header {
   background-image: linear-gradient(to right bottom, var(--second-green), var(--primary-green));
+  border-radius: 0 0 1rem 1rem;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   position: sticky;
   top: 0;
   z-index: 98;
@@ -160,7 +156,6 @@ main { margin-bottom: 1rem; }
 #card-restaurants {
   display: grid;
   grid-gap: 2.5rem 4rem;
-  grid-template-columns: repeat(3, 1fr);
 }
 #card-restaurants > .card {
   background-color: var(--primary-white);
@@ -211,6 +206,7 @@ main { margin-bottom: 1rem; }
 footer {
   align-items: center;
   background-color: var(--primary-pink);
+  border-radius: 1rem 1rem 0 0;
   display: flex;
   justify-content: space-between;
 }

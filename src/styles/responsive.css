@@ -1,11 +1,13 @@
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 31.1875em) {
   #drawer {
     display: block;
     background-color: #ccf3e2ea;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 1 / 15%);
     position: absolute;
-    left: 100%;
     margin-top: 4.625rem;
     text-align: center;
+    transform: translate(calc(-100% - 2rem), 0);
+    -webkit-transform: translate(calc(-100% - 2rem), 0);
     transition: transform 0.35s ease-in-out;
     width: 100%;
     z-index: 99;
@@ -16,7 +18,10 @@
     font-weight: 600;
     padding: 1rem;
   }
-  #drawer.open { transform: translate(-100%,0); }
+  #drawer.open {
+    -webkit-transform: translate(-2rem, 0);
+    transform: translate(-2rem, 0);
+  }
   
   #hamburger {
     color: var(--primary-white);
@@ -32,3 +37,12 @@
   header > h1 { font-size: 1.8rem; }
   header > ul { display: none; }
 }
+
+@media screen and (min-width: 56.25em) {
+  #card-restaurants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* @media screen and (max-width: 48em) { 
+} */
