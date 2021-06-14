@@ -1,0 +1,78 @@
+/* breakpoint within max-width */
+@media screen and (max-width: 75em) {
+  header, main, footer { padding: 1rem 2.75rem; }
+
+  #card-restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  header, main, footer { padding: 1rem; }
+
+  #drawer {
+    display: block;
+    background-color: #ccf3e2ea;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 1 / 15%);
+    position: absolute;
+    margin-top: 4rem;
+    text-align: center;
+    transform: translate(calc(-100% - 2rem), 0);
+    -webkit-transform: translate(calc(-100% - 2rem), 0);
+    transition: transform 0.35s ease-in-out;
+    width: 100%;
+    z-index: 99;
+  }
+  #drawer a { 
+    border-bottom: .1rem solid var(--primary-white);
+    display: block;
+    font-weight: 600;
+    padding: 1rem;
+  }
+  #drawer.open {
+    -webkit-transform: translate(-2rem, 0);
+    transform: translate(-2rem, 0);
+  }
+  
+  #hamburger {
+    color: var(--primary-white);
+    cursor: pointer;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: auto 0;
+    text-shadow: 0 0 .7rem #878787;
+  }
+
+  header { padding: 1rem 2rem; }
+  header > a { font-size: 2rem; }
+
+  .hero { margin-bottom: 1.5rem; }
+  .hero > h1 { font-size: 4rem; }
+  .hero > h2 { font-size: 2rem; }
+  .hero > a { padding: 0.5rem 1rem; }
+
+  .content > h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.25rem;
+  }
+  .content > h2:before, .content > h2:after { margin: auto 0.15rem; }
+
+  #card-restaurants {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  footer { font-size: 0.7rem; }
+}
+/* breakpoint within max-width */
+
+/* breakpoint within min-width */
+@media screen and (min-width: 80em) {
+  header, main, footer {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}
+/* breakpoint within min-width */
