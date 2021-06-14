@@ -41,6 +41,7 @@
 									   to(#19911D),
 									   color-stop(.6,#54DE5D))
 }
+html { scroll-behavior: smooth; }
 a { 
   color: inherit;
   text-decoration: none;
@@ -49,6 +50,16 @@ a {
 .ts-light { text-shadow: .2rem .2rem .5rem #878787;}
 /* styled classes */
 
+.skip-link {
+  background-color: var(--primary-yellow);
+  font-weight: 600;
+  top: -3.5rem;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  z-index: 999;
+}
+.skip-link:focus { top: 0; }
 
 header, main, footer {
   padding: 2rem 3.65rem;
