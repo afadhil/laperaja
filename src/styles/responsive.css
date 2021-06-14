@@ -1,5 +1,16 @@
-@media screen and (max-width: 31.1875em) {
+/* breakpoint within max-width */
+@media screen and (max-width: 75em) {
+  header, main, footer { padding: 1rem 2.75rem; }
+
+  #card-restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
   header, main, footer { padding: 1rem; }
+
   #drawer {
     display: block;
     background-color: #ccf3e2ea;
@@ -46,18 +57,22 @@
     font-size: 1.9rem;
     margin-bottom: 1.25rem;
   }
-  .content > h2:before, .content > h2:after { margin: auto 0; }
+  .content > h2:before, .content > h2:after { margin: auto 0.15rem; }
 
-  #card-restaurants { row-gap: 1.5rem; }
+  #card-restaurants {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
 
   footer { font-size: 0.7rem; }
 }
+/* breakpoint within max-width */
 
-@media screen and (min-width: 56.25em) {
-  #card-restaurants {
-    grid-template-columns: repeat(3, 1fr);
+/* breakpoint within min-width */
+@media screen and (min-width: 80em) {
+  header, main, footer {
+    max-width: 80rem;
+    margin: 0 auto;
   }
 }
-
-/* @media screen and (max-width: 48em) { 
-} */
+/* breakpoint within min-width */

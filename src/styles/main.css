@@ -50,7 +50,10 @@ a {
 /* styled classes */
 
 
-header, main, footer { padding: 2rem 5rem; }
+header, main, footer {
+  padding: 2rem 3.65rem;
+  width: 100%;
+}
 
 #hamburger { display: none; }
 
@@ -157,7 +160,8 @@ main { margin-bottom: 1rem; }
 
 #card-restaurants {
   display: grid;
-  grid-gap: 2.5rem 4rem;
+  gap: 2.5rem 4rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 #card-restaurants > .card {
   background-color: var(--primary-white);
