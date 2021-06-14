@@ -24,12 +24,12 @@ data.restaurants.forEach(
     (listRestaurant += `
     <div class="card">
       <figure>
-        <img src="${item.pictureId}" alt="suasana restaurant ${item.name}">
-        <span>Rating: <strong>${item.rating}</strong> | Kota: <strong>${item.city}</strong></span>
+        <img src="${item.pictureId}" alt="suasana restaurant ${item.name}" tabindex="0">
+        <span tabindex="0">Rating: <strong>${item.rating}</strong> | Kota: <strong>${item.city}</strong></span>
       </figure>
       <article>
-        <h4>${item.name}</h4>
-        <p>${item.description}</p>
+        <h3 tabindex="0">${item.name}</h3>
+        <p tabindex="0">${item.description}</p>
       </article>
     </div>
   `)

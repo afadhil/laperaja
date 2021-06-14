@@ -204,7 +204,7 @@ main { margin-bottom: 1rem; }
   right: 1rem;
 }
 #card-restaurants > .card > article { padding: 0.5rem 1.55rem; }
-#card-restaurants > .card > article > h4 {
+#card-restaurants > .card > article > h3 {
   font-family: var(--font-heading);
   font-size: 2rem;
   line-height: 1.25;
