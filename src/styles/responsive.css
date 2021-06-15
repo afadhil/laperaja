@@ -2,6 +2,8 @@
 @media screen and (max-width: 75em) {
   header, main, footer { padding: 1rem 2.75rem; }
 
+  .hero { margin: 0 -2.75rem 2rem; }
+
   #card-restaurants {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 3rem;
@@ -37,18 +39,18 @@
   
   #hamburger {
     color: var(--primary-white);
-    cursor: pointer;
     display: block;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 800;
     margin: auto 0;
     text-shadow: 0 0 .7rem #878787;
+    width: 3rem;
   }
 
   header { padding: 1rem 2rem; }
   header > a { font-size: 2rem; }
 
-  .hero { margin-bottom: 1.5rem; }
+  .hero { margin: 0 -1rem 1.5rem; }
   .hero > h1 { font-size: 4rem; }
   .hero > h2 { font-size: 2rem; }
   .hero > a { padding: 0.5rem 1rem; }
