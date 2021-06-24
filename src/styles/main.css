@@ -74,7 +74,7 @@ header, main, footer {
   width: 100%;
 }
 
-#hamburger { display: none; }
+#hamburgerButton { display: none; }
 
 body {
   background-color: #f8eded;
@@ -181,22 +181,22 @@ main {
   margin: auto 1.5rem;
 }
 
-#card-restaurants {
+.restaurants {
   display: grid;
   gap: 2.5rem 4rem;
   grid-template-columns: repeat(3, 1fr);
 }
-#card-restaurants > .card {
+.restaurants > .card {
   background-color: var(--primary-white);
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgb(0 0 1 / 15%);
   margin-top: 1rem;
   height: auto;
 }
-#card-restaurants > .card > figure {
+.restaurants > .card > figure {
   position: relative;
 }
-#card-restaurants > .card > figure > img {
+.restaurants > .card > figure > img {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
@@ -204,7 +204,7 @@ main {
   object-fit: cover;
   width: 100%;
 }
-#card-restaurants > .card > figure > span {
+.restaurants > .card > figure > span {
   background-color: var(--primary-yellow);
   border-radius: 0.35rem;
   box-shadow: 0 -0.1rem 1.85rem rgb(0 0 1 / 15%);
@@ -215,15 +215,15 @@ main {
   position: absolute;
   right: 1rem;
 }
-#card-restaurants > .card > article { padding: 0.5rem 1.55rem; }
-#card-restaurants > .card > article > h3 {
+.restaurants > .card > article { padding: 0.5rem 1.55rem; }
+.restaurants > .card > article > h3 {
   font-family: var(--font-heading);
   font-size: 2rem;
   line-height: 1.25;
   margin-bottom: 1rem;
   text-align: center;
 }
-#card-restaurants > .card > article > p {
+.restaurants > .card > article > p {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   display: -webkit-box;
