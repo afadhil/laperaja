@@ -1,26 +1,25 @@
-import "regenerator-runtime"; /* for async await transpile */
-import "../styles/main.css";
-import "../styles/responsive.css";
-import data from "../DATA.json";
+import 'regenerator-runtime'; /* for async await transpile */
+import '../styles/main.css';
+import '../styles/responsive.css';
+import data from '../DATA.json';
 
-const hamburgerBtn = document.querySelector("#hamburger");
-const drawerElement = document.querySelector("#drawer");
-const mainElement = document.querySelector("main");
+const hamburgerBtn = document.querySelector('#hamburger');
+const drawerElement = document.querySelector('#drawer');
+const mainElement = document.querySelector('main');
 
-hamburgerBtn.addEventListener("click", (event) => {
-  drawerElement.classList.toggle("open");
+hamburgerBtn.addEventListener('click', (event) => {
+  drawerElement.classList.toggle('open');
   event.stopPropagation();
 });
 
-mainElement.addEventListener("click", (event) => {
-  drawerElement.classList.remove("open");
+mainElement.addEventListener('click', (event) => {
+  drawerElement.classList.remove('open');
   event.stopPropagation();
 });
 
-let listRestaurant = "";
-data.restaurants.forEach(
-  (item) =>
-    (listRestaurant += `
+let listRestaurant = '';
+data.restaurants.forEach((item) => {
+  listRestaurant += `
     <div class="card">
       <figure>
         <img src="${item.pictureId}" alt="suasana restaurant ${item.name}" tabindex="0">
@@ -31,6 +30,7 @@ data.restaurants.forEach(
         <p tabindex="0">${item.description}</p>
       </article>
     </div>
-  `)
-);
-document.querySelector("#card-restaurants").innerHTML = listRestaurant;
+  `;
+  return listRestaurant;
+});
+document.querySelector('#card-restaurants').innerHTML = listRestaurant;
