@@ -9,7 +9,6 @@ const mainElement = document.querySelector("main");
 
 hamburgerBtn.addEventListener("click", (event) => {
   drawerElement.classList.toggle("open");
-  console.log(drawerElement.classList);
   event.stopPropagation();
 });
 
