@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -44,5 +45,6 @@ module.exports = {
     new FaviconsWebpackPlugin({
       logo: path.resolve(__dirname, "src/public/images/icons/logo.png"),
     }),
+    new CleanWebpackPlugin(),
   ],
 };
