@@ -5,7 +5,7 @@
     padding-right: 2.75rem;
   }
 
-  .hero { margin: 0 -2.75rem 2rem; }
+  .hero { margin: 0 -1.75rem 2rem; }
 
   .restaurants {
     grid-template-columns: repeat(2, 1fr);
@@ -59,7 +59,7 @@
   }
   header > a { font-size: 2rem; }
 
-  .hero { margin: 0 -2rem 1.5rem; }
+  .hero { margin: 0 -1rem 1.5rem; }
   .hero > h1 { font-size: 4rem; }
   .hero > h2 { font-size: 2rem; }
   .hero > a { padding: 0.5rem 1rem; }
@@ -85,4 +85,13 @@
     padding-top: 1rem;
   }
 }
-/* breakpoint within max-width */
+/* end of breakpoint within max-width */
+
+/* breakpoint within min-width */
+@media screen and (min-width: 80em) {
+  header, main, footer {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}
+/* end of breakpoint within min-width */
