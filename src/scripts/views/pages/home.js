@@ -1,5 +1,5 @@
-import DicodingRestaurantSource from '../../data/dicoding-restaurant-source';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import RestaurantdbSource from '../../data/restaurantdb-source';
+import { restaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -17,10 +17,10 @@ const Home = {
   },
 
   async afterRender() {
-    const { restaurants } = await DicodingRestaurantSource.listRestaurants();
+    const { restaurants } = await RestaurantdbSource.listRestaurants();
     const restaurantsContainer = document.querySelector('#restaurantsContainer');
     restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      restaurantsContainer.innerHTML += restaurantItemTemplate(restaurant);
     });
   },
 };
