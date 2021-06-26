@@ -1,0 +1,359 @@
+:root {
+  --font-heading: 'Caveat Brush';
+  --font-basic: 'Montserrat', sans-serif;
+  --primary-black: #3e3e3e;
+  --primary-green: #47ffb3;
+  --primary-pink: #e4bad4;
+  --primary-white: #f9f9f9;
+  --primary-yellow: #ffff0d;
+  --second-yellow: #ffff01;
+  --second-green: #91fdd0;
+}
+* {
+  animation: fade-in 0.5s ease-in-out;
+  box-sizing: border-box;
+  font-family: var(--font-basic);
+  line-height: 1.5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar-track
+{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D))
+}
+html { scroll-behavior: smooth; }
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+/* styled classes */
+.ts-light { text-shadow: .2rem .2rem .5rem #878787;}
+/* styled classes */
+
+.skip-link {
+  background-color: var(--primary-yellow);
+  font-weight: 600;
+  top: -3.5rem;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  z-index: 999;
+}
+.skip-link:focus { top: 0; }
+
+header, main, footer {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  width: 100%;
+}
+
+#hamburgerButton { display: none; }
+
+body {
+  background-color: #f8eded;
+  color: var(--primary-black);
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+header {
+  background-image: linear-gradient(to right bottom, var(--second-green), var(--primary-green));
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 98;
+}
+header > a {
+  color: var(--primary-yellow);
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+header > nav {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+header > nav > a {
+  border-right: 0.15rem solid rgba(249, 249, 249, 0.5);
+  color: var(--primary-white);
+  display: block;
+  font-weight: 700;
+  padding: 1rem 1.2rem;
+  transition: color 0.35s ease-in-out;
+}
+header > nav > a:hover { color: var(--primary-yellow); }
+header > nav > a:last-child { border-right: none; }
+
+main {
+  padding-bottom: 2.5rem;
+  padding-top: 2rem;
+}
+
+.hero {
+  align-items: center;
+  background-image:
+    linear-gradient(to left top, rgba(96, 247, 179, 0.8), rgba(209, 253, 234, 0.8)),
+    url('../public/images/heros/hero-image.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  /* clip-path: polygon(50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%); */
+  color: var(--primary-white);
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  justify-content: center;
+  margin: 0 -3.5rem 2.5rem;
+  text-transform: uppercase;
+}
+.hero > h1 {
+  color: var(--primary-yellow);
+  font-size: 6rem;
+  line-height: 0.88;
+  letter-spacing: 1rem;
+  margin-right: -1rem;
+}
+.hero > h1, .hero > h2 { font-family: var(--font-heading); }
+.hero > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  word-spacing: 0.5rem;
+}
+.hero > a {
+  background-color: var(--primary-white);
+  border: .19rem solid var(--second-yellow);
+  border-radius: 1rem;
+  color: var(--primary-black);
+  font-weight: 600;
+  padding: 0.85rem 3rem;
+  text-shadow: none;
+  transition: background-color 0.35s ease-in-out;
+}
+.hero > a:hover { background-color: var(--second-yellow); }
+
+.content > h2 {
+  display: flex;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.content > h2:before, .content > h2:after {
+  border-bottom: .2rem solid var(--primary-black);
+  content: "";
+  flex: 1 1;
+  margin: auto 1.5rem;
+}
+
+.restaurants {
+  display: grid;
+  gap: 2.5rem 4rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.restaurants > .card {
+  background-color: var(--primary-white);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 1 / 15%);
+  margin-top: 1rem;
+  height: auto;
+}
+.restaurants > .card > figure {
+  position: relative;
+}
+.restaurants > .card > figure > img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  height: 15rem;
+  object-fit: cover;
+  width: 100%;
+}
+.restaurants > .card > figure > span {
+  background-color: var(--primary-yellow);
+  border-radius: 0.35rem;
+  box-shadow: 0 -0.1rem 1.85rem rgb(0 0 1 / 15%);
+  font-size: 0.75rem;
+  line-height: 0.75;
+  margin-top: -1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 1rem;
+}
+.restaurants > .card > article { padding: 0.5rem 1.55rem; }
+.restaurants > .card > article > h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.restaurants > .card > article > p {
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-align: justify;
+  text-overflow: ellipsis;
+}
+
+.restaurant__image {
+  border-radius: 1rem;
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  height: 30rem;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  width: 100%;
+}
+.restaurant__article > h2 {
+  display: flex;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.restaurant__article > h2:before, .restaurant__article > h2:after {
+  border-bottom: .2rem solid var(--primary-black);
+  content: "";
+  flex: 1 1;
+  margin: auto 1.5rem;
+}
+.restaurant__article > label { margin-bottom: 1rem;}
+.restaurant__detail {
+  display: grid;
+  grid-gap: 0.75rem 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.5rem;
+}
+.restaurant__detail > p:first-child {
+  grid-column: 1/3;
+  text-align: justify;
+  text-indent: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.restaurant__detail > p > label,
+.restaurant__article > label,
+.comment-box > label {
+  background-color: var(--primary-green);
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 7rem;
+  padding: 0.15rem 0.5rem;
+  text-align: center;
+}
+.restaurant__detail > p:nth-child(6),
+.restaurant__detail > p:nth-child(7) {
+  line-height: 1.6;
+}
+.restaurant__review {
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  max-height: 40rem;
+}
+.restaurant__review > li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.restaurant__review > li:nth-child(even) {
+  align-items: flex-end;
+}
+.restaurant__review > li > div {
+  background-color: var(--primary-white);
+  padding: 1rem 2.5rem;
+  width: 60%;
+}
+.restaurant__review > li:nth-child(odd) > div {
+  background-color: rgba(71, 255, 179, 0.55);
+  border-radius: 1rem 1rem 1rem 0;
+  box-shadow: 0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
+}
+.restaurant__review > li:nth-child(even) > div {
+  background-color: var(--primary-white);
+  border-radius: 1rem 1rem 0;
+  box-shadow: -0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
+  text-align: right;
+}
+.restaurant__review > li > div > p:first-child {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.comment-box > label { margin-bottom: 1rem; }
+.comment-box__form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 1rem;
+}
+.comment-box__form > input, .comment-box__form > textarea {
+  border-color: var(--primary-green);
+  border-radius: 0.5rem;
+  grid-column: 1/3;
+  padding: 0.65rem;
+}
+.comment-box__form > input {
+  width: 50%;
+}
+.comment-box__form > textarea {
+  resize: none;
+  height: 7rem;
+}
+.comment-box__form > button {
+  background-color: var(--primary-green);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  grid-column: 2/3;
+  padding: 0.85rem 3rem;
+}
+
+footer {
+  align-items: center;
+  background-color: var(--primary-pink);
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  justify-content: space-between;
+}
+footer > strong:last-child > a { color: var(--primary-white); }

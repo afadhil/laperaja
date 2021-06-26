@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 
 module.exports = {
@@ -46,5 +47,19 @@ module.exports = {
       logo: path.resolve(__dirname, 'src/public/images/icons/logo.png'),
     }),
     new CleanWebpackPlugin(),
+    new WebpackPwaManifest({
+      name: 'LaperAja by Fadhil',
+      short_name: 'LaperAja',
+      description: 'LaperAja is PWA app by Fadhil',
+      background_color: '#91fdd0',
+      theme_color: '#91fdd0',
+      crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
+      icons: [
+        {
+          src: path.resolve('src/public/images/icons/logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+        },
+      ],
+    }),
   ],
 };
