@@ -299,19 +299,18 @@ main {
 .restaurant__review > li > div {
   background-color: var(--primary-white);
   padding: 1rem 2.5rem;
+  width: 60%;
 }
 .restaurant__review > li:nth-child(odd) > div {
   background-color: rgba(71, 255, 179, 0.55);
   border-radius: 1rem 1rem 1rem 0;
   box-shadow: 0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
-  width: 60%;
 }
 .restaurant__review > li:nth-child(even) > div {
   background-color: var(--primary-white);
   border-radius: 1rem 1rem 0;
   box-shadow: -0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
   text-align: right;
-  width: 60%;
 }
 .restaurant__review > li > div > p:first-child {
   display: inline-block;

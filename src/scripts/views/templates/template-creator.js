@@ -25,7 +25,7 @@ const restaurantDetailTemplate = (restaurant) => `
 }" alt="suasana restaurant ${restaurant.name}" tabindex="0">
   <article class="restaurant__article">
     <h2>${restaurant.name}</h2>
-    <div class="restaurant__detail">
+    <section class="restaurant__detail">
       <p>${restaurant.description}</p>
       <p><label>Kota:</label> ${restaurant.city}</p>
       <p><label>Alamat:</label> ${restaurant.address}</p>
@@ -33,7 +33,7 @@ const restaurantDetailTemplate = (restaurant) => `
       <p><label>Rating:</label> ${restaurant.rating}</p>
       <p><label>Makanan:</label>${restaurant.menus.foods.map((food) => ` ${food.name}`)}</p>
       <p><label>Minuman:</label>${restaurant.menus.drinks.map((drink) => ` ${drink.name}`)}</p>
-    </div>
+    </section>
     <label>Reviews:</label>
     <ul class="restaurant__review">
       ${restaurant.customerReviews.map((customer) => `
