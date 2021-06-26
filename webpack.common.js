@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -61,6 +62,9 @@ module.exports = {
           sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
         },
       ],
+    }),
+    new ServiceWorkerWebpackPlugin({
+      entry: path.resolve(__dirname, 'src/scripts/sw.js'),
     }),
   ],
 };
