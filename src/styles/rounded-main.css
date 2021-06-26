@@ -285,7 +285,8 @@ main {
   line-height: 1.6;
 }
 .restaurant__review {
-  display: block;
+  overflow-y: auto;
+  max-height: 40rem;
 }
 .restaurant__review > li {
   display: flex;
@@ -297,16 +298,18 @@ main {
 }
 .restaurant__review > li > div {
   background-color: var(--primary-white);
-  border-radius: 0.75rem;
-  box-shadow: 0 0.5rem 1rem rgb(0 0 1 / 15%);
   padding: 1rem 2.5rem;
 }
 .restaurant__review > li:nth-child(odd) > div {
-  border: 0.185rem solid var(--primary-green);
+  background-color: rgba(71, 255, 179, 0.55);
+  border-radius: 1rem 1rem 1rem 0;
+  box-shadow: 0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
   width: 60%;
 }
 .restaurant__review > li:nth-child(even) > div {
-  border: 0.185rem solid var(--primary-pink);
+  background-color: var(--primary-white);
+  border-radius: 1rem 1rem 0;
+  box-shadow: -0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
   text-align: right;
   width: 60%;
 }
