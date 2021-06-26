@@ -1,5 +1,14 @@
 import CONFIG from '../../globals/config';
 
+const commentBoxTemplate = () => `
+  <label for="formCommentBox">Add Comment</label>
+  <form id="formCommentBox" class="comment-box__form" autocomplete="off">
+    <input name="name" type="text" placeholder="Name" />
+    <textarea name="review" placeholder="Comment"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+`;
+
 const restaurantItemTemplate = (restaurant) => `
 <a href="/#/detail/${restaurant.id}" class="card">
       <figure>
@@ -34,8 +43,8 @@ const restaurantDetailTemplate = (restaurant) => `
       <p><label>Makanan:</label>${restaurant.menus.foods.map((food) => ` ${food.name}`)}</p>
       <p><label>Minuman:</label>${restaurant.menus.drinks.map((drink) => ` ${drink.name}`)}</p>
     </section>
-    <label>Reviews:</label>
-    <ul class="restaurant__review">
+    <label for="restaurantReview">Reviews:</label>
+    <ul id="restaurantReview" class="restaurant__review">
       ${restaurant.customerReviews.map((customer) => `
         <li>
           <div>
@@ -62,6 +71,7 @@ const createLikedButtonTemplate = () => `
 `;
 
 export {
+  commentBoxTemplate,
   restaurantItemTemplate,
   restaurantDetailTemplate,
   createLikeButtonTemplate,

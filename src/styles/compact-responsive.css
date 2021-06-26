@@ -83,6 +83,8 @@
   .restaurant__detail > p:first-child { grid-column: auto; }
   .restaurant__review > li > div { width: 85%; }
 
+  .comment-box__form > input { width: 100%; }
+
   footer { font-size: 0.85rem; }
 }
 
