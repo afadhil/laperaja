@@ -37,6 +37,5 @@
   "display": "standalone",
   "start_url": ".",
   "description": "LaperAja is PWA app by Fadhil",
-  "background_color": "#91fdd0",
-  "theme_color": "#91fdd0"
+  "background_color": "#91fdd0"
 }

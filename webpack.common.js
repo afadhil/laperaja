@@ -51,8 +51,9 @@ module.exports = {
       name: 'LaperAja by Fadhil',
       short_name: 'LaperAja',
       description: 'LaperAja is PWA app by Fadhil',
+      // inject: true,
+      // theme_color: '#91fdd0',
       background_color: '#91fdd0',
-      theme_color: '#91fdd0',
       crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
       icons: [
         {
