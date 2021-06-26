@@ -1,6 +1,6 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import '../styles/rounded-main.css';
-import '../styles/rounded-responsive.css';
+import '../styles/compact-main.css';
+import '../styles/compact-responsive.css';
 import App from './views/app';
 
 const app = new App({
