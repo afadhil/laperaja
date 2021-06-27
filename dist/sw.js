@@ -1,9 +1,5 @@
 var serviceWorkerOption = {
   "assets": [
-    "/bd6b63650298f334a08b66446d66c536.jpg",
-    "/bundle.js",
-    "/images/heros/hero-image.jpg",
-    "/images/icons/logo.png",
     "/assets/favicon-16x16.png",
     "/assets/favicon-32x32.png",
     "/assets/favicon-48x48.png",
@@ -66,6 +62,10 @@ var serviceWorkerOption = {
     "/assets/manifest.webapp",
     "/assets/browserconfig.xml",
     "/assets/yandex-browser-manifest.json",
+    "/bd6b63650298f334a08b66446d66c536.jpg",
+    "/bundle.js",
+    "/images/heros/hero-image.jpg",
+    "/images/icons/logo.png",
     "/index.html",
     "/manifest.d442cadf1d658a43fbec11ec2ff0b469.json",
     "/icon_512x512.3bcb9d91f29c5db62e8a557473f32231.png",
