@@ -9,6 +9,26 @@ const commentBoxTemplate = () => `
   </form>
 `;
 
+const favoriteButtonTemplate = () => `
+  <button aria-label="favoritkan restoran ini" id="favoriteButton" class="favorite">
+     <span>Favorite Me!&nbsp</span>
+     <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const favoritedButtonTemplate = () => `
+  <button aria-label="hapus restoran ini dari favorit" id="favoriteButton" class="favorite">
+    <span>Favorited&nbsp</span>
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+const noDataTemplate = () => `
+  <div class="content middle">
+    <h2>Oops! No data provided</h2>
+  </div>
+`;
+
 const restaurantItemTemplate = (restaurant) => `
 <a href="/#/detail/${restaurant.id}" class="card">
       <figure>
@@ -58,24 +78,11 @@ const restaurantDetailTemplate = (restaurant) => `
   </article>
 `;
 
-const favoriteButtonTemplate = () => `
-  <button aria-label="favoritkan restoran ini" id="favoriteButton" class="favorite">
-     <span>Favorite Me!&nbsp</span>
-     <i class="fa fa-heart-o" aria-hidden="true"></i>
-  </button>
-`;
-
-const favoritedButtonTemplate = () => `
-  <button aria-label="hapus restoran ini dari favorit" id="favoriteButton" class="favorite">
-    <span>Favorited&nbsp</span>
-    <i class="fa fa-heart" aria-hidden="true"></i>
-  </button>
-`;
-
 export {
   commentBoxTemplate,
-  restaurantItemTemplate,
-  restaurantDetailTemplate,
   favoriteButtonTemplate,
   favoritedButtonTemplate,
+  noDataTemplate,
+  restaurantItemTemplate,
+  restaurantDetailTemplate,
 };

@@ -121,6 +121,10 @@ header > nav > a:hover { color: var(--primary-yellow); }
 header > nav > a:last-child { border-right: none; }
 
 main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
   padding-bottom: 2.5rem;
   padding-top: 2rem;
@@ -143,6 +147,7 @@ main {
   justify-content: center;
   margin: 0 -3.5rem 2.5rem;
   text-transform: uppercase;
+  width: 100%;
 }
 .hero > h1 {
   color: var(--primary-yellow);
@@ -169,6 +174,7 @@ main {
 }
 .hero > a:hover { background-color: var(--second-yellow); }
 
+.content { width: 100%; }
 .content > h2 {
   display: flex;
   font-family: var(--font-heading);
@@ -183,6 +189,7 @@ main {
   flex: 1 1;
   margin: auto 1.5rem;
 }
+.content .middle { grid-column: 1/end; }
 
 .restaurants {
   display: grid;
@@ -324,6 +331,7 @@ main {
   margin-bottom: 0.35rem;
 }
 
+.comment-box { width: 100%; }
 .comment-box > label { margin-bottom: 1rem; }
 .comment-box__form {
   display: grid;
