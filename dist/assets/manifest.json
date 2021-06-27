@@ -1,7 +1,7 @@
 {
   "name": "laperaja",
   "short_name": "laperaja",
-  "description": "",
+  "description": "laperaja is restaurants list web app",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
