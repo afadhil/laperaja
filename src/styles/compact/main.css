@@ -309,12 +309,12 @@ main {
 }
 .restaurant__review > li:nth-child(odd) > div {
   background-color: rgba(71, 255, 179, 0.55);
-  border-radius: 1rem 1rem 1rem 0;
+  border-radius: 3.125rem 3.125rem 3.125rem 0;
   box-shadow: 0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
 }
 .restaurant__review > li:nth-child(even) > div {
   background-color: var(--primary-white);
-  border-radius: 1rem 1rem 0;
+  border-radius: 3.125rem 3.125rem 0;
   box-shadow: -0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
   text-align: right;
 }
@@ -355,7 +355,7 @@ main {
   align-items: center;
   background-color: var(--primary-green);
   border: 0;
-  border-radius: 1rem;
+  border-radius: 3.125rem 3.125rem 0;
   bottom: 1.15rem;
   box-shadow: 0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
   color: var(--primary-black);
@@ -364,7 +364,7 @@ main {
   font-size: 1.2rem;
   font-weight: 600;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   position: fixed;
   right: 1.15rem;
 }
