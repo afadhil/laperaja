@@ -3,10 +3,11 @@ const CONFIG = {
   BASE_IMAGE_URL_SMALL: 'https://restaurant-api.dicoding.dev/images/small/',
   BASE_IMAGE_URL_MEDIUM: 'https://restaurant-api.dicoding.dev/images/medium/',
   BASE_IMAGE_URL_LARGE: 'https://restaurant-api.dicoding.dev/images/large/',
-  CACHE_NAME: 'laperaja-v1',
+  CACHE_NAME: new Date().toISOString(),
+  // CACHE_NAME: 'laperaja-v2',
   DATABASE_NAME: 'laperaja-indexed-db',
   DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'fav-restaurant',
+  OBJECT_STORE_NAME: 'fav-restaurants',
   TEST_KEY: 1234,
 };
 

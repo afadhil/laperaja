@@ -1,12 +1,14 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantdbSource from '../../data/restaurantdb-source';
 import { commentBoxTemplate, restaurantDetailTemplate } from '../templates/template-creator';
+import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
 
 const Detail = {
   async render() {
     return `
     <div id="restaurantContainer" class="restaurant"></div>
     <div id="commentBoxContainer" class="comment-box"></div>
+    <div id="favoriteButtonContainer"></div>
     `;
   },
 
@@ -18,11 +20,17 @@ const Detail = {
     const commentBoxContainer = document.querySelector('#commentBoxContainer');
     commentBoxContainer.innerHTML = commentBoxTemplate();
     const formCommentBox = document.getElementById('formCommentBox');
+
     formCommentBox.addEventListener('submit', (event) => {
       event.preventDefault();
       let payload = Object.fromEntries(new FormData(formCommentBox).entries());
       payload = { ...payload, id: restaurant.id };
       RestaurantdbSource.addReview(payload);
+    });
+
+    FavoriteButtonInitiator.init({
+      favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
+      restaurant,
     });
   },
 };

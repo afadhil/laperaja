@@ -126,7 +126,7 @@ main {
   align-items: center;
   background-image:
     linear-gradient(to left top, rgba(96, 247, 179, 0.8), rgba(209, 253, 234, 0.8)),
-    url('../public/images/heros/hero-image.jpg');
+    url('../../public/images/heros/hero-image.jpg');
   background-position: center;
   background-size: cover;
   border-radius: 1rem;
@@ -345,6 +345,24 @@ main {
   font-weight: 600;
   grid-column: 2/3;
   padding: 0.85rem 3rem;
+}
+
+.favorite {
+  align-items: center;
+  background-color: var(--primary-green);
+  border: 0;
+  border-radius: 1rem;
+  bottom: 1.15rem;
+  box-shadow: 0.25rem 0.35rem 1rem rgb(0 0 1 / 15%);
+  color: var(--primary-black);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 1rem;
+  position: fixed;
+  right: 1.15rem;
 }
 
 footer {

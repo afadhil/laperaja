@@ -127,7 +127,7 @@ main {
   align-items: center;
   background-image:
     linear-gradient(to left top, rgba(96, 247, 179, 0.8), rgba(209, 253, 234, 0.8)),
-    url('../public/images/heros/hero-image.jpg');
+    url('../../public/images/heros/hero-image.jpg');
   background-position: center;
   background-size: cover;
   /* border-radius: 1rem; */
