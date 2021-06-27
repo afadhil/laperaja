@@ -79,7 +79,10 @@ header, main, footer {
 body {
   background-color: #f8eded;
   color: var(--primary-black);
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -118,6 +121,7 @@ header > nav > a:hover { color: var(--primary-yellow); }
 header > nav > a:last-child { border-right: none; }
 
 main {
+  flex: 1;
   padding-bottom: 2.5rem;
   padding-top: 2rem;
 }
