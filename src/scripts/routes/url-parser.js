@@ -17,7 +17,6 @@ const UrlParser = {
   },
 
   parseActiveUrlWithCombiner() {
-    console.log('window location', window.location);
     const url = window.location.hash.slice(1).toLowerCase();
     const splitedUrl = this._urlSplitter(url);
     return this._urlCombiner(splitedUrl);
