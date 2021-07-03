@@ -53,6 +53,10 @@ button {
   cursor: pointer;
   padding: 0;
 }
+input, textarea, button {
+  min-width: 3rem;
+  min-height: 3rem;
+}
 /* styled classes */
 .ts-light { text-shadow: .2rem .2rem .5rem #878787;}
 /* styled classes */
