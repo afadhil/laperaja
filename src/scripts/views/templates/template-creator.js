@@ -24,7 +24,7 @@ const favoritedButtonTemplate = () => `
 `;
 
 const noDataTemplate = () => `
-  <div class="content middle">
+  <div class="content middle no-data">
     <h2>Oops! No data provided</h2>
   </div>
 `;
