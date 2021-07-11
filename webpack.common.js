@@ -41,13 +41,16 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/'),
+          from: path.resolve(__dirname, 'src/public'),
+          to: path.resolve(__dirname, 'dist'),
+          globOptions: {
+            ignore: ['**/images/**'],
+          },
         },
       ],
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, 'src/public/images/icons/logo.png'),
+      logo: path.resolve(__dirname, 'src/public/favicon.png'),
     }),
     new CleanWebpackPlugin(),
     new WebpackPwaManifest({
@@ -60,7 +63,7 @@ module.exports = {
       crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
       icons: [
         {
-          src: path.resolve('src/public/images/icons/logo.png'),
+          src: path.resolve('src/public/favicon.png'),
           sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
         },
       ],
