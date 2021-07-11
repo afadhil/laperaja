@@ -136,9 +136,6 @@ main {
 
 .hero {
   align-items: center;
-  background-image:
-    linear-gradient(to left top, rgba(96, 247, 179, 0.8), rgba(209, 253, 234, 0.8)),
-    url('../../public/images/heros/hero-image.jpg');
   background-position: center;
   background-size: cover;
   border-radius: 1rem;
@@ -210,7 +207,8 @@ main {
 .restaurants > .card > figure {
   position: relative;
 }
-.restaurants > .card > figure > img {
+/* .restaurants > .card > figure > img */
+.card__image {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);

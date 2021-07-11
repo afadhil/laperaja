@@ -4,13 +4,39 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 20000,
+      maxSize: 70000,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   module: {
     rules: [
@@ -39,13 +65,16 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/'),
+          from: path.resolve(__dirname, 'src/public'),
+          to: path.resolve(__dirname, 'dist'),
+          globOptions: {
+            ignore: ['**/images/**'],
+          },
         },
       ],
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, 'src/public/images/icons/logo.png'),
+      logo: path.resolve(__dirname, 'src/public/favicon.png'),
     }),
     new CleanWebpackPlugin(),
     new WebpackPwaManifest({
@@ -58,7 +87,7 @@ module.exports = {
       crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
       icons: [
         {
-          src: path.resolve('src/public/images/icons/logo.png'),
+          src: path.resolve('src/public/favicon.png'),
           sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
         },
       ],
@@ -66,5 +95,14 @@ module.exports = {
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
     }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+    new BundleAnalyzerPlugin(),
   ],
 };
