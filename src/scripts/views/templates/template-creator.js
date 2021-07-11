@@ -7,7 +7,7 @@ const commentBoxTemplate = () => `
   <form id="formCommentBox" class="comment-box__form" autocomplete="off">
     <input name="name" type="text" placeholder="Name" />
     <textarea name="review" placeholder="Comment"></textarea>
-    <button type="submit">Submit</button>
+    <button class="form__submit" type="submit">Submit</button>
   </form>
 `;
 
@@ -72,9 +72,9 @@ const restaurantDetailTemplate = (restaurant) => `
       ${restaurant.customerReviews.map((customer) => `
         <li>
           <div>
-            <p>${customer.name},</p>
+            <p id="customer__name">${customer.name},</p>
             <small>${customer.date}</small>
-            <p>${customer.review}</p>
+            <p id="customer__review">${customer.review}</p>
           </div>
         </li>
       `).join('')}
