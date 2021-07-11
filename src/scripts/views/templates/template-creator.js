@@ -1,4 +1,6 @@
 import CONFIG from '../../globals/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const commentBoxTemplate = () => `
   <label for="formCommentBox">Add Comment</label>
@@ -32,9 +34,11 @@ const noDataTemplate = () => `
 const restaurantItemTemplate = (restaurant) => `
 <a href="/#/detail/${restaurant.id}" class="card">
       <figure>
-        <img src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" alt="suasana restaurant ${
-  restaurant.name
-}" tabindex="0">
+        <picture>
+          <source media="(min-width: 80em)" srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}">
+          <img class="card__image lazyload" src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" 
+            alt="suasana restaurant ${restaurant.name}" tabindex="0">
+        </picture>
         <span tabindex="0">Rating: <strong>${restaurant.rating}</strong> | Kota: <strong>${
   restaurant.city
 }</strong></span>
@@ -47,11 +51,11 @@ const restaurantItemTemplate = (restaurant) => `
 `;
 
 const restaurantDetailTemplate = (restaurant) => `
-  <img class="restaurant__image" src="${
-  restaurant.pictureId
-    ? CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId
-    : 'https://picsum.photos/id/666/800/450?grayscale'
-}" alt="suasana restaurant ${restaurant.name}" tabindex="0">
+  <picture>
+    <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}">
+    <img class="restaurant__image lazyload" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" 
+      alt="suasana restaurant ${restaurant.name}" tabindex="0">
+  </picture>
   <article class="restaurant__article">
     <h2>${restaurant.name}</h2>
     <section class="restaurant__detail">
