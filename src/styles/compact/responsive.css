@@ -1,22 +1,37 @@
 /* breakpoint within max-width */
 @media screen and (max-width: 75em) {
-  header, main, footer {
+  main { padding-top: 1.85rem; }
+
+  header, footer, .content {
     padding-left: 2.75rem;
     padding-right: 2.75rem;
   }
 
-  .hero { margin: 0 -1.75rem 2rem; }
-
-  .restaurants {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 3rem;
+  .hero {
+    margin-bottom: 2rem;
   }
 
   .restaurant__review > li > div { width: 70%; }
 }
 
+@media screen and (max-width: 62.5em) {
+  main { padding-top: 1.65rem; }
+
+  header, footer, .content {
+    padding-left: 2.85rem;
+    padding-right: 2.85rem;
+  }
+
+  .restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+  }
+}
+
 @media screen and (max-width: 48em) {
-  header, main, footer {
+  main { padding-top: 1.25rem; }
+
+  header, footer, .content {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -63,7 +78,7 @@
   }
   header > a { font-size: 2rem; }
 
-  .hero { margin: 0 -1rem 1.5rem; }
+  .hero {margin-bottom: 1.5rem; }
   .hero > h1 { font-size: 4rem; }
   .hero > h2 { font-size: 2rem; }
   .hero > a { padding: 0.5rem 1rem; }
@@ -98,7 +113,7 @@
 }
 
 @media screen and (max-width: 32em) {
-  header, main, footer {
+  header, footer, .content {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -133,7 +148,7 @@
 
 /* breakpoint within min-width */
 @media screen and (min-width: 80em) {
-  header, main, footer {
+  header, footer, main {
     max-width: 80rem;
     margin: 0 auto;
   }
