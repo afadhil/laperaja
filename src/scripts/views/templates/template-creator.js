@@ -34,7 +34,7 @@ const noDataTemplate = () => `
 const restaurantItemTemplate = (restaurant) => `
 <a href="/#/detail/${restaurant.id}" class="card">
       <figure>
-        <img class="card__image lazyload" src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" 
+        <img class="card__image lazyload" data-src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}"
             alt="suasana restaurant ${restaurant.name}" tabindex="0">
         <span tabindex="0">Rating: <strong>${restaurant.rating}</strong> | Kota: <strong>${
   restaurant.city
